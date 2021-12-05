@@ -7,6 +7,19 @@
     <title>Advent Of Code 2021</title>
 </head>
 <body>
+    <style>
+        table, th, td {
+            padding: 5px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table {
+            margin-top: .5em;
+        }
+        td, th {
+            text-align: center;
+        }
+    </style>
     <script src="/Day1Solution1.js"></script>
     <script src="/Day1Solution2.js"></script>
     <script src="/Day2Solution1.js"></script>
@@ -23,98 +36,109 @@
                 <th>Puzzle (Day.Part)</th>
                 <th>With Sample Data</th>
                 <th>With Full Data</th>
+                <th>Result</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th class='puzzle'>1.1</th>
-                <th>
+                <td class='puzzle'>1.1</td>
+                <td>
                     <button>Solve</button>
-                </th>
-                <th>
+                </td>
+                <td>
                     <button>Solve</button>
-                </th>
+                </td>
+                <td></td>
             </tr>
             <tr>
-                <th class='puzzle'>1.2</th>
-                <th>
+                <td class='puzzle'>1.2</td>
+                <td>
                     <button>Solve</button>
-                </th>
-                <th>
+                </td>
+                <td>
                     <button>Solve</button>
-                </th>
+                </td>
+                <td></td>
             </tr>
             <tr>
-                <th class='puzzle'>2.1</th>
-                <th>
+                <td class='puzzle'>2.1</td>
+                <td>
                     <button>Solve</button>
-                </th>
-                <th>
+                </td>
+                <td>
                     <button>Solve</button>
-                </th>
+                </td>
+                <td></td>
             </tr>
             <tr>
-                <th class='puzzle'>2.2</th>
-                <th>
+                <td class='puzzle'>2.2</td>
+                <td>
                     <button>Solve</button>
-                </th>
-                <th>
+                </td>
+                <td>
                     <button>Solve</button>
-                </th>
+                </td>
+                <td></td>
             </tr>
             <tr>
-                <th class='puzzle'>3.1</th>
-                <th>
+                <td class='puzzle'>3.1</td>
+                <td>
                     <button>Solve</button>
-                </th>
-                <th>
+                </td>
+                <td>
                     <button>Solve</button>
-                </th>
+                </td>
+                <td></td>
             </tr>
             <tr>
-                <th class="puzzle">3.2</th>
-                <th>
+                <td class="puzzle">3.2</td>
+                <td>
                     <button>Solve</button>
-                </th>
-                <th>
+                </td>
+                <td>
                     <button>Solve</button>
-                </th>
+                </td>
+                <td></td>
             </tr>
             <tr>
-                <th class="puzzle">4.1</th>
-                <th>
+                <td class="puzzle">4.1</td>
+                <td>
                     <button>Solve</button>
-                </th>
-                <th>
+                </td>
+                <td>
                     <button>Solve</button>
-                </th>
+                </td>
+                <td></td>
             </tr>
             <tr>
-                <th class="puzzle">4.2</th>
-                <th>
+                <td class="puzzle">4.2</td>
+                <td>
                     <button>Solve</button>
-                </th>
-                <th>
+                </td>
+                <td>
                     <button>Solve</button>
-                </th>
+                </td>
+                <td></td>
             </tr>
             <tr>
-                <th class="puzzle">5.1</th>
-                <th>
+                <td class="puzzle">5.1</td>
+                <td>
                     <button>Solve</button>
-                </th>
-                <th>
+                </td>
+                <td>
                     <button>Solve</button>
-                </th>
+                </td>
+                <td></td>
             </tr>
             <tr>
-                <th class="puzzle">5.2</th>
-                <th>
+                <td class="puzzle">5.2</td>
+                <td>
                     <button>Solve</button>
-                </th>
-                <th>
+                </td>
+                <td>
                     <button>Solve</button>
-                </th>
+                </td>
+                <td></td>
             </tr>
 
         </tbody>
@@ -167,11 +191,18 @@
                     day5Solution1(inputData);
                     break;
                 case "5.2":
-                    day5Solution2(inputData);
+                    drawSolutionToTable(day5Solution2(inputData), buttonClicked.closest('tr'));
                     break;
                 default:
                     console.assert('Not implemented');
             }
+        }
+
+        function drawSolutionToTable(result, tableRow) {
+            let solutionCells = tableRow.querySelectorAll('td');
+            let solutionCell = solutionCells[solutionCells.length - 1];
+            solutionCell.innerText = result;
+            solutionCell.style.color = 'red';
         }
     </script>
 </body>

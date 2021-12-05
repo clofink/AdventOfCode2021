@@ -1,5 +1,5 @@
 function day2Solution1(data) {
-    console.log("Day 2 Part 1:", solve(data.split('\n')));
+    return solve(data.split('\n'));
 
     function solve(data) {
         var horizontalPos = 0;

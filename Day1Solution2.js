@@ -1,6 +1,6 @@
 function day1Solution2(data) {
     // just logging the result to the console
-    console.log("Day 1 Part 2:", solve(data.split('\n')));
+    return solve(data.split('\n'));
 
     // takes the data (already broken up by line)
     function solve(data) {

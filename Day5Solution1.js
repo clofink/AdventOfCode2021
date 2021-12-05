@@ -1,5 +1,5 @@
 function day5Solution1(result) {
-    console.log("Day 5 Part 1:", solve(result.split('\n')));
+    return solve(result.split('\n'));
 
     function solve(data) {
         let diagram = createDiagram(parseInput(data));

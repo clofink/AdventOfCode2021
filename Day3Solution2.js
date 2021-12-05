@@ -1,5 +1,5 @@
 function day3Solution2(result) {
-    console.log("Day 3 Part 2:", solve(result.split('\n')));
+    return solve(result.split('\n'));
 
     function solve(data) {
         let startDataLength = data.length;

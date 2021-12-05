@@ -1,5 +1,5 @@
 function day4Solution1(result) {
-    console.log("Day 4 Part 1:", solve(result.split('\n')));
+    return solve(result.split('\n'));
 
     function solve(data) {
         let parsedData = parseInput(data);

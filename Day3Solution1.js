@@ -1,5 +1,5 @@
 function day3Solution1(result) {
-    console.log("Day 3 Part 1:", solve(result.split('\n')));
+    return solve(result.split('\n'));
 
     function solve(data) {
         onesCount = [];
