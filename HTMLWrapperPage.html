@@ -17,6 +17,162 @@
     <script src="/Day4Solution2.js"></script>
     <script src="/Day5Solution1.js"></script>
     <script src="/Day5Solution2.js"></script>
+    <table>
+        <thead>
+            <tr>
+                <th>Puzzle (Day.Part)</th>
+                <th>With Sample Data</th>
+                <th>With Full Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th class='puzzle'>1.1</th>
+                <th>
+                    <button>Solve</button>
+                </th>
+                <th>
+                    <button>Solve</button>
+                </th>
+            </tr>
+            <tr>
+                <th class='puzzle'>1.2</th>
+                <th>
+                    <button>Solve</button>
+                </th>
+                <th>
+                    <button>Solve</button>
+                </th>
+            </tr>
+            <tr>
+                <th class='puzzle'>2.1</th>
+                <th>
+                    <button>Solve</button>
+                </th>
+                <th>
+                    <button>Solve</button>
+                </th>
+            </tr>
+            <tr>
+                <th class='puzzle'>2.2</th>
+                <th>
+                    <button>Solve</button>
+                </th>
+                <th>
+                    <button>Solve</button>
+                </th>
+            </tr>
+            <tr>
+                <th class='puzzle'>3.1</th>
+                <th>
+                    <button>Solve</button>
+                </th>
+                <th>
+                    <button>Solve</button>
+                </th>
+            </tr>
+            <tr>
+                <th class="puzzle">3.2</th>
+                <th>
+                    <button>Solve</button>
+                </th>
+                <th>
+                    <button>Solve</button>
+                </th>
+            </tr>
+            <tr>
+                <th class="puzzle">4.1</th>
+                <th>
+                    <button>Solve</button>
+                </th>
+                <th>
+                    <button>Solve</button>
+                </th>
+            </tr>
+            <tr>
+                <th class="puzzle">4.2</th>
+                <th>
+                    <button>Solve</button>
+                </th>
+                <th>
+                    <button>Solve</button>
+                </th>
+            </tr>
+            <tr>
+                <th class="puzzle">5.1</th>
+                <th>
+                    <button>Solve</button>
+                </th>
+                <th>
+                    <button>Solve</button>
+                </th>
+            </tr>
+            <tr>
+                <th class="puzzle">5.2</th>
+                <th>
+                    <button>Solve</button>
+                </th>
+                <th>
+                    <button>Solve</button>
+                </th>
+            </tr>
 
+        </tbody>
+    </table>
+    <script>
+        let buttons = document.querySelectorAll('button');
+        for (let button of buttons) {
+            button.addEventListener('click', runSolution);
+        }
+
+        async function runSolution(event) {
+            let buttonClicked = event.target;
+            let puzzle = buttonClicked.closest('tr').querySelector('.puzzle').innerText;
+            let fileName = 'Day' + puzzle.split('.')[0];
+            let buttons = buttonClicked.closest('tr').querySelectorAll('button');
+            if (buttonClicked == buttons[1]) {
+                fileName = fileName + 'Input.txt';
+            }
+            if (buttonClicked == buttons[0]) {
+                fileName = fileName + 'SampleInput.txt';
+            }
+            let input = await fetch(fileName);
+            let inputData = await input.text();
+            switch (puzzle) {
+                case "1.1":
+                    day1Solution1(inputData);
+                    break;
+                case "1.2":
+                    day1Solution2(inputData);
+                    break;
+                case "2.1":
+                    day2Solution1(inputData);
+                    break;
+                case "2.2":
+                    day2Solution2(inputData);
+                    break;
+                case "3.1":
+                    day3Solution1(inputData);
+                    break;
+                case "3.2":
+                    day3Solution2(inputData);
+                    break;
+                case "4.1":
+                    day4Solution1(inputData);
+                    break;
+                case "4.2":
+                    day4Solution2(inputData);
+                    break;
+                case "5.1":
+                    day5Solution1(inputData);
+                    break;
+                case "5.2":
+                    day5Solution2(inputData);
+                    break;
+                default:
+                    console.assert('Not implemented');
+            }
+        }
+    </script>
 </body>
 </html>
