@@ -7,7 +7,6 @@ function day6Solution2(result) {
         for (let time of data) {
             countOfEachTime[time]++;
         }
-        console.log(countOfEachTime);
         let numberOfDays = 256;
         for (let t = 0; t < numberOfDays; t++) {
             let temp = countOfEachTime['0'];
