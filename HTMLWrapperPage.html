@@ -30,10 +30,12 @@
     <script src="/Day4Solution2.js"></script>
     <script src="/Day5Solution1.js"></script>
     <script src="/Day5Solution2.js"></script>
+    <script src="/Day6Solution1.js"></script>
+    <script src="/Day6Solution2.js"></script>
     <table>
         <thead>
             <tr>
-                <th>Puzzle (Day.Part)</th>
+                <th>Puzzle [Day.Part]</th>
                 <th>With Sample Data</th>
                 <th>With Full Data</th>
                 <th>Result</th>
@@ -140,7 +142,26 @@
                 </td>
                 <td></td>
             </tr>
-
+            <tr>
+                <td class="puzzle">6.1</td>
+                <td>
+                    <button>Solve</button>
+                </td>
+                <td>
+                    <button>Solve</button>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="puzzle">6.2</td>
+                <td>
+                    <button>Solve</button>
+                </td>
+                <td>
+                    <button>Solve</button>
+                </td>
+                <td></td>
+            </tr>
         </tbody>
     </table>
     <script>
@@ -164,34 +185,40 @@
             let inputData = await input.text();
             switch (puzzle) {
                 case "1.1":
-                    day1Solution1(inputData);
+                    drawSolutionToTable(day1Solution1(inputData), buttonClicked.closest('tr'));
                     break;
                 case "1.2":
-                    day1Solution2(inputData);
+                    drawSolutionToTable(day1Solution2(inputData), buttonClicked.closest('tr'));
                     break;
                 case "2.1":
-                    day2Solution1(inputData);
+                    drawSolutionToTable(day2Solution1(inputData), buttonClicked.closest('tr'));
                     break;
                 case "2.2":
-                    day2Solution2(inputData);
+                    drawSolutionToTable(day2Solution2(inputData), buttonClicked.closest('tr'));
                     break;
                 case "3.1":
-                    day3Solution1(inputData);
+                    drawSolutionToTable(day3Solution1(inputData), buttonClicked.closest('tr'));
                     break;
                 case "3.2":
-                    day3Solution2(inputData);
+                    drawSolutionToTable(day3Solution2(inputData), buttonClicked.closest('tr'));
                     break;
                 case "4.1":
-                    day4Solution1(inputData);
+                    drawSolutionToTable(day4Solution1(inputData), buttonClicked.closest('tr'));
                     break;
                 case "4.2":
-                    day4Solution2(inputData);
+                    drawSolutionToTable(day4Solution2(inputData), buttonClicked.closest('tr'));
                     break;
                 case "5.1":
-                    day5Solution1(inputData);
+                    drawSolutionToTable(day5Solution1(inputData), buttonClicked.closest('tr'));
                     break;
                 case "5.2":
                     drawSolutionToTable(day5Solution2(inputData), buttonClicked.closest('tr'));
+                    break;
+                case "6.1":
+                    drawSolutionToTable(day6Solution1(inputData), buttonClicked.closest('tr'));
+                    break;
+                case "6.2":
+                    drawSolutionToTable(day6Solution2(inputData), buttonClicked.closest('tr'));
                     break;
                 default:
                     console.assert('Not implemented');
