@@ -34,6 +34,8 @@
     <script src="/Day6Solution2.js"></script>
     <script src="/Day7Solution1.js"></script>
     <script src="/Day7Solution2.js"></script>
+    <script src="/Day8Solution1.js"></script>
+    <script src="/Day8Solution2.js"></script>
     <table>
         <thead>
             <tr>
@@ -184,6 +186,26 @@
                 </td>
                 <td></td>
             </tr>
+            <tr>
+                <td class="puzzle">8.1</td>
+                <td>
+                    <button>Solve</button>
+                </td>
+                <td>
+                    <button>Solve</button>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="puzzle">8.2</td>
+                <td>
+                    <button>Solve</button>
+                </td>
+                <td>
+                    <button>Solve</button>
+                </td>
+                <td></td>
+            </tr>
         </tbody>
     </table>
     <script>
@@ -247,6 +269,12 @@
                     break;
                 case "7.2":
                     drawSolutionToTable(day7Solution2(inputData), buttonClicked.closest('tr'));
+                    break;
+                case "8.1":
+                    drawSolutionToTable(day8Solution1(inputData), buttonClicked.closest('tr'));
+                    break;
+                case "8.2":
+                    drawSolutionToTable(day8Solution2(inputData), buttonClicked.closest('tr'));
                     break;
                 default:
                     console.assert('Not implemented');
