@@ -46,6 +46,8 @@
     <script src="/Day12Solution2.js"></script>
     <script src="/Day13Solution1.js"></script>
     <script src="/Day13Solution2.js"></script>
+    <script src="/Day14Solution1.js"></script>
+    <script src="/Day14Solution2.js"></script>
 
     <table>
         <thead>
@@ -317,6 +319,26 @@
                 </td>
                 <td></td>
             </tr>
+            <tr>
+                <td class="puzzle">14.1</td>
+                <td>
+                    <button>Solve</button>
+                </td>
+                <td>
+                    <button>Solve</button>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="puzzle">14.2</td>
+                <td>
+                    <button>Solve</button>
+                </td>
+                <td>
+                    <button>Solve</button>
+                </td>
+                <td></td>
+            </tr>
 
         </tbody>
     </table>
@@ -417,6 +439,12 @@
                     break;
                 case "13.2":
                     drawSolutionToTable(day13Solution2(inputData), buttonClicked.closest('tr'));
+                    break;
+                case "14.1":
+                    drawSolutionToTable(day14Solution1(inputData), buttonClicked.closest('tr'));
+                    break;
+                case "14.2":
+                    drawSolutionToTable(day14Solution2(inputData), buttonClicked.closest('tr'));
                     break;
 
                 default:
